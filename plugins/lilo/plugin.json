@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lilo",
+  "version": "0.1.0",
+  "description": "Manage your saved LILO locations and collections with your assistant.",
+  "homepage": "https://lilo.app",
+  "keywords": [
+    "locations",
+    "collections",
+    "travel"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "LILO",
+        "shortDescription": "Your places, organized",
+        "longDescription": "Connect your LILO account to find and manage your saved locations, organize collections, read and edit supported profile fields, and export owned locations as a Lilopack. Actions use your granted permissions and existing LILO access rules. A LILO account is required. Photos can be uploaded to existing locations through a returned HTTP PUT URL or imported from a direct public HTTPS image URL. Creating locations from photos, nearby search, geocoding, and importing Lilopacks are not supported. Location exports exclude photos and collections.",
+        "category": "Productivity",
+        "capabilities": [
+          "Manage saved locations",
+          "Organize collections",
+          "Edit profile details",
+          "Export owned locations"
+        ],
+        "websiteURL": "https://lilo.app",
+        "supportURL": "https://lilo.app/about",
+        "privacyPolicyURL": "https://lilo.app/privacy",
+        "defaultPrompt": [
+          "Find my saved locations tagged cafe.",
+          "Show the places in my weekend collection.",
+          "Export all my saved locations."
+        ],
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png",
+        "developerName": "LILO"
+      }
+    }
+  },
+  "author": {
+    "name": "LILO",
+    "email": "contact@lilo.app",
+    "url": "https://lilo.app/about"
+  },
+  "repository": "https://github.com/klaas/lilo-plugins"
+}

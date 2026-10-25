@@ -1,0 +1,20 @@
+{
+  "name": "lilo-plugins",
+  "interface": {
+    "displayName": "LILO Plugins"
+  },
+  "plugins": [
+    {
+      "name": "lilo",
+      "source": {
+        "source": "local",
+        "path": "./plugins/lilo"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
