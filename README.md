@@ -17,7 +17,7 @@ Restart the desktop app, open the Plugins Directory, select **LILO Plugins**, an
 codex plugin add lilo@lilo-plugins
 ```
 
-Complete the client's OAuth connection flow and sign in with your own LILO account. If you are new to LILO, sign in at https://lilo.app first. Review the requested permissions. Never paste tokens into chat.
+Complete the client's OAuth connection flow and sign in with your own LILO account. If you are new to LILO, sign in at https://lilo.app first. Review the requested permissions. Version 0.1.1 requests all supported user permissions on first connection: identity, refresh access, profile read/write, location read/write/delete, image uploads, and collection read/write/delete. These are configured in `mcp.json` under `extensions.com.openai.auth.baseScopes`. Users still consent, and LILO ownership and collection-role checks still apply. Never paste tokens into chat.
 
 Start a new chat, select LILO, and try:
 
@@ -48,7 +48,7 @@ Your location data stays behind LILO authentication; it is not stored in this Gi
 codex plugin marketplace upgrade lilo-plugins
 ```
 
-Restart your client and check its plugin update/install controls. Existing OAuth grants do not automatically gain new permissions.
+Restart your client and check its plugin update/install controls. Existing OAuth grants do not automatically gain new permissions. After upgrading from 0.1.0, reconnect LILO and consent to the full permission set. Verify the granted scopes with `get_connection_info`; a read-only grant remains read-only until reauthorized.
 
 ## Maintainers
 
