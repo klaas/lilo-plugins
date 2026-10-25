@@ -3,31 +3,7 @@
   "mcpServers": {
     "lilo": {
       "type": "streamable-http",
-      "url": "https://lilo.app/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "cimd"
-            },
-            "baseScopes": [
-              "profile",
-              "offline_access",
-              "profile:read",
-              "profile:write",
-              "locations:read",
-              "locations:write",
-              "locations:delete",
-              "assets:write",
-              "collections:read",
-              "collections:write",
-              "collections:delete"
-            ],
-            "oidcEnabled": false
-          }
-        }
-      }
+      "url": "https://lilo.app/mcp"
     }
   }
 }
